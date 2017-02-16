@@ -1,6 +1,6 @@
 import Reflux from 'reflux';
 
-const JobActions = Reflux.createAction([
+const JobActions = Reflux.createActions([
   'getJobs'
 ]);
 
@@ -13,7 +13,7 @@ class JobStore extends Reflux.Store {
     this.listenables = JobActions;
   }
 
-  getJobs() {
+  onGetJobs() {
     console.log('called getJobs, gonna log this')
     console.log(this);
     this.well = 'shit';

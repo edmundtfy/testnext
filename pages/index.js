@@ -7,15 +7,16 @@ import JobStore from '../stores/jobStore';
 import Modal from '../components/modal'
 
 export default class extends Reflux.Component {
-  // static getInitialProps () {
-  //   return {
-  //     photos: new Array(15).fill(0).map((v, k) => k + 1)
-  //   }
-  // }
+  static getInitialProps () {
+    return {
+      photos: new Array(15).fill(0).map((v, k) => k + 1)
+    }
+  }
 
   constructor (props) {
     super(props)
     console.log(JobStore);
+    this.state = {};
     this.store = JobStore;
     this.onKeyDown = this.onKeyDown.bind(this)
   }
@@ -47,8 +48,8 @@ export default class extends Reflux.Component {
 
   render () {
     const { url, photos } = this.props
-    console.log("inside index.js rendering, will log this.state");
-    console.log(this.state);
+    // console.log("inside index.js rendering, will log this.state");
+    // console.log(this.state);
     return (
       <div className='list'>
         {
