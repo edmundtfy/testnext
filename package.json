@@ -15,9 +15,9 @@
     "parser": "babel-eslint"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 8080",
     "build": "next build",
-    "start": "NODE_ENV=production next start",
+    "start": "NODE_ENV=production next start -p 8080",
     "lint": "standard"
   }
 }
